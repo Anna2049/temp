@@ -1,3 +1,10 @@
+Display Name	Property Kind	Data Type	Default
+ColorBg	Input	Color	=RGBA(42, 58, 74, 1)
+ColorItemBg	Input	Color	=RGBA(78, 90, 99, 1)
+ColorItemHover	Input	Color	=RGBA(61, 77, 87, 1)
+ColorText	Input	Color	=RGBA(240, 243, 245, 1)
+ColorActiveBorder	Input	Color	=RGBA(93, 196, 182, 1)
+
 Set(
     gTheme,
     {
