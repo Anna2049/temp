@@ -1,3 +1,47 @@
+Set(
+    gTheme,
+    {
+        // Brand
+        colorPrimary:        ColorValue("#0f2d51"),
+        colorPrimaryDark:    ColorValue("#071a30"),
+        colorAccent:         ColorValue("#d4a84b"),
+        colorAccentDark:     ColorValue("#b8922f"),
+        colorAccentAltLight: ColorValue("#5dc4b6"),
+
+        // Nav sidebar (matches color-mix values from theme.css)
+        colorNavBg:          ColorValue("#2a3a4a"),
+        colorNavItemBg:      ColorValue("#4e5a63"),
+        colorNavItemHover:   ColorValue("#3d4d57"),
+        colorNavBorder:      ColorValue("#2e3c47"),
+        colorNavText:        ColorValue("#f0f3f5"),
+        colorNavTextLink:    ColorValue("#dce3e9"),
+        colorNavActiveBorder:ColorValue("#5dc4b6"),
+
+        // General
+        colorBg:             ColorValue("#f8f9fa"),
+        colorSurface:        ColorValue("#ffffff"),
+        colorBorder:         ColorValue("#dee2e6"),
+        colorText:           ColorValue("#212529"),
+        colorTextMuted:      ColorValue("#6c757d"),
+        colorError:          ColorValue("#721c24"),
+        colorSuccess:        ColorValue("#155724"),
+
+        // Sizing
+        fontSizeBase:        14,
+        fontSizeSm:          12,
+        fontSizeLg:          18,
+        fontSizeXl:          24,
+        radiusBase:          4,
+        navWidthExpanded:    220,
+        navWidthCollapsed:   60,
+        navHeaderHeight:     60,
+        navItemHeight:       48
+    }
+);
+Set(gNavCollapsed, false);
+Set(gUser, User())
+
+
 ComponentDefinitions:
   cmp_NavBar:
     DefinitionType: CanvasComponent
