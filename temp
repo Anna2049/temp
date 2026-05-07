@@ -1,8 +1,18 @@
 Table(
-    {label: "Home", icon: "🏠", screen: "scrHome"},
-    {label: "New Request", icon: "📄", screen: "scrIntakeForm"},
-    {label: "My Requests", icon: "👤", screen: "scrMyRequests"},
-    {label: "Admin", icon: "⚙", screen: "scrAdmin"}
+    {section: "", label: "Homepage", icon: "🏠", screen: "scrHome"},
+    {section: "", label: "All My Requests", icon: "✏️", screen: "scrMyRequests"},
+    {section: "", label: "My Delegates", icon: "👥", screen: "scrDelegations"},
+    {section: "", label: "Reference Materials", icon: "❓", screen: "scrReference"},
+    {section: "DEMO AND TEST FORMS", label: "Field types", icon: "📄", screen: "scrFieldTypes"},
+    {section: "DEMO AND TEST FORMS", label: "Conditional fields", icon: "📄", screen: "scrConditional"},
+    {section: "DEMO AND TEST FORMS", label: "High level components", icon: "📄", screen: "scrHighLevel"},
+    {section: "DEMO AND TEST FORMS", label: "Brief form", icon: "📄", screen: "scrBrief"},
+    {section: "PROJECT MEMBERS - QUEUES", label: "Requests assigned to me", icon: "📋", screen: "scrAssignedToMe"},
+    {section: "PROJECT MEMBERS - QUEUES", label: "New requests", icon: "❔", screen: "scrNewRequests"},
+    {section: "PROJECT MEMBERS - QUEUES", label: "Assigned requests", icon: "✅", screen: "scrAssigned"},
+    {section: "PROJECT MEMBERS - QUEUES", label: "Suspended requests", icon: "⛔", screen: "scrSuspended"},
+    {section: "PROJECT MEMBERS - OTHER", label: "All items in database", icon: "🗃️", screen: "scrAllItems"},
+    {section: "PROJECT MEMBERS - OTHER", label: "Processors", icon: "👤", screen: "scrProcessors"}
 )
 
 =If(cmp_NavBar.Collapsed; "☰"; "✕")
