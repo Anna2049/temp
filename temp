@@ -1,20 +1,97 @@
-Set(
-    gTheme,
-    {
-        colorPrimary:     ColorValue("#0078D4"),
-        colorPrimaryDark: ColorValue("#005A9E"),
-        colorBackground:  ColorValue("#F5F5F5"),
-        colorSurface:     ColorValue("#FFFFFF"),
-        colorBorder:      ColorValue("#D1D1D1"),
-        colorText:        ColorValue("#1A1A1A"),
-        colorTextMuted:   ColorValue("#6B6B6B"),
-        colorError:       ColorValue("#D13438"),
-        colorSuccess:     ColorValue("#107C10"),
-        fontSizeBase:     14,
-        fontSizeLg:       18,
-        fontSizeXl:       24,
-        radiusBase:       4,
-        spacing:          16
-    }
-);
-Set(gUser, User())
+ComponentDefinitions:
+  cmp_NavBar:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      Collapsed:
+        PropertyKind: Input
+        DisplayName: Collapsed
+        Description: Whether the sidebar is collapsed
+        DataType: Boolean
+        Default: =false
+    Properties:
+      Height: =App.Height
+      Width: =If(cmp_NavBar.Collapsed, 60, 220)
+    Children:
+    - NavBg:
+        Control: Rectangle
+        Properties:
+          X: =0
+          Y: =0
+          Width: =Parent.Width
+          Height: =Parent.Height
+          Fill: =RGBA(43, 43, 43, 1)
+    - BtnToggle:
+        Control: Button
+        Properties:
+          X: =0
+          Y: =0
+          Width: =Parent.Width
+          Height: =60
+          Text: =If(cmp_NavBar.Collapsed, "☰", "✕")
+          Fill: =RGBA(0, 0, 0, 0)
+          HoverFill: =RGBA(255, 255, 255, 0.1)
+          PressedFill: =RGBA(255, 255, 255, 0.2)
+          Color: =White
+          BorderThickness: =0
+          Size: =18
+          OnSelect: =Set(gNavCollapsed, !gNavCollapsed)
+    - NavItem_Home:
+        Control: Button
+        Properties:
+          X: =0
+          Y: =70
+          Width: =Parent.Width
+          Height: =48
+          Text: =If(cmp_NavBar.Collapsed, "🏠", "🏠   Home")
+          Fill: =RGBA(0, 0, 0, 0)
+          HoverFill: =RGBA(255, 255, 255, 0.1)
+          Color: =White
+          BorderThickness: =0
+          Align: =Align.Left
+          PaddingLeft: =If(cmp_NavBar.Collapsed, 0, 16)
+          OnSelect: =Navigate(scrHome)
+    - NavItem_NewRequest:
+        Control: Button
+        Properties:
+          X: =0
+          Y: =118
+          Width: =Parent.Width
+          Height: =48
+          Text: =If(cmp_NavBar.Collapsed, "📄", "📄   New Request")
+          Fill: =RGBA(0, 0, 0, 0)
+          HoverFill: =RGBA(255, 255, 255, 0.1)
+          Color: =White
+          BorderThickness: =0
+          Align: =Align.Left
+          PaddingLeft: =If(cmp_NavBar.Collapsed, 0, 16)
+          OnSelect: =Navigate(scrIntakeForm)
+    - NavItem_MyRequests:
+        Control: Button
+        Properties:
+          X: =0
+          Y: =166
+          Width: =Parent.Width
+          Height: =48
+          Text: =If(cmp_NavBar.Collapsed, "👤", "👤   My Requests")
+          Fill: =RGBA(0, 0, 0, 0)
+          HoverFill: =RGBA(255, 255, 255, 0.1)
+          Color: =White
+          BorderThickness: =0
+          Align: =Align.Left
+          PaddingLeft: =If(cmp_NavBar.Collapsed, 0, 16)
+          OnSelect: =Navigate(scrMyRequests)
+    - NavItem_Admin:
+        Control: Button
+        Properties:
+          X: =0
+          Y: =214
+          Width: =Parent.Width
+          Height: =48
+          Text: =If(cmp_NavBar.Collapsed, "⚙️", "⚙️   Admin")
+          Fill: =RGBA(0, 0, 0, 0)
+          HoverFill: =RGBA(255, 255, 255, 0.1)
+          Color: =White
+          BorderThickness: =0
+          Align: =Align.Left
+          PaddingLeft: =If(cmp_NavBar.Collapsed, 0, 16)
+          OnSelect: =Navigate(scrAdmin)
