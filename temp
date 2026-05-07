@@ -1,3 +1,5 @@
+=If(cmp_NavBar.Collapsed; "☰"; "✕")
+
 Display Name	Property Kind	Data Type	Default
 ColorBg	Input	Color	=RGBA(42, 58, 74, 1)
 ColorItemBg	Input	Color	=RGBA(78, 90, 99, 1)
