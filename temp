@@ -1,0 +1,20 @@
+Set(
+    gTheme,
+    {
+        colorPrimary:     ColorValue("#0078D4"),
+        colorPrimaryDark: ColorValue("#005A9E"),
+        colorBackground:  ColorValue("#F5F5F5"),
+        colorSurface:     ColorValue("#FFFFFF"),
+        colorBorder:      ColorValue("#D1D1D1"),
+        colorText:        ColorValue("#1A1A1A"),
+        colorTextMuted:   ColorValue("#6B6B6B"),
+        colorError:       ColorValue("#D13438"),
+        colorSuccess:     ColorValue("#107C10"),
+        fontSizeBase:     14,
+        fontSizeLg:       18,
+        fontSizeXl:       24,
+        radiusBase:       4,
+        spacing:          16
+    }
+);
+Set(gUser, User())
