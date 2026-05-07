@@ -1,3 +1,10 @@
+Table(
+    {label: "Home", icon: "🏠", screen: "scrHome"},
+    {label: "New Request", icon: "📄", screen: "scrIntakeForm"},
+    {label: "My Requests", icon: "👤", screen: "scrMyRequests"},
+    {label: "Admin", icon: "⚙", screen: "scrAdmin"}
+)
+
 =If(cmp_NavBar.Collapsed; "☰"; "✕")
 
 Display Name	Property Kind	Data Type	Default
