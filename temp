@@ -1,3 +1,20 @@
+=Switch(ThisItem.screen,
+    "scrHome", Navigate(scrHome),
+    "scrMyRequests", Navigate(scrMyRequests),
+    "scrDelegations", Navigate(scrDelegations),
+    "scrReference", Navigate(scrReference),
+    "scrFieldTypes", Navigate(scrFieldTypes),
+    "scrConditional", Navigate(scrConditional),
+    "scrHighLevel", Navigate(scrHighLevel),
+    "scrBrief", Navigate(scrBrief),
+    "scrAssignedToMe", Navigate(scrAssignedToMe),
+    "scrNewRequests", Navigate(scrNewRequests),
+    "scrAssigned", Navigate(scrAssigned),
+    "scrSuspended", Navigate(scrSuspended),
+    "scrAllItems", Navigate(scrAllItems),
+    "scrProcessors", Navigate(scrProcessors)
+)
+
 Table(
     {section: "", label: "Homepage", icon: "🏠", screen: "scrHome"},
     {section: "", label: "All My Requests", icon: "✏️", screen: "scrMyRequests"},
